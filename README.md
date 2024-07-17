@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Let's build an awesome form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+In this task, we'll build a form following the best practices and make it highly accessible. We'll also use JavaScript to validate the form and send data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Design
+Please refer the screenshots attached inside `/design` folder.
 
-## Expanding the ESLint configuration
+## Objectives
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Build a form using HTML and styles it using Tailwindcss. 
+2. The form should follow the best practices for accessibility.
+3. Use JavaScript to validate and properly submit the form
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Side Note
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Show more interest in implementing states of the UI elements like hover, active, focus, filled, etc.
+- Refer [MDN](https://developer.mozilla.org/en-US/docs/Learn/Forms) and [WAI](https://www.w3.org/WAI/tutorials/forms/) for more information about building a form.
+- Feel free to explore Tailwindcss in this task
+- Always remember - "What we build is, What you use". 
