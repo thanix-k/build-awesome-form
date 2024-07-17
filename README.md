@@ -13,6 +13,20 @@ Please refer the screenshots added inside `/design` folder.
 2. The form should follow the best practices (html, css) for better accessibility.
 3. Use JavaScript to validate and properly submit the form
 
+## Workflow
+
+- Clone the repo
+- Create a new branch
+- Work on the task
+- Push the changes
+- Create a PR
+
+## Get Started
+
+- Use the command `pnpm install` to install the dependencies.
+- Use the command `pnpm dev` to start the development server.
+
+
 
 ## Side Note
 
@@ -20,3 +34,5 @@ Please refer the screenshots added inside `/design` folder.
 - Refer [MDN](https://developer.mozilla.org/en-US/docs/Learn/Forms) and [WAI](https://www.w3.org/WAI/tutorials/forms/) for more information about building a form.
 - Feel free to explore Tailwindcss in this task. Customizing and playing with Tailwind is always fun.
 - Finally, Always remember - "What we build is, What we use". 
+
+
