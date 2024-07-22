@@ -16,12 +16,12 @@ function App() {
         <Input id="website_url" label="What is your website url (optional)?" placeholder="https://" type="url" required/>
         <FieldSet legend="I’m signing up for Tiptap because">
           {checkBoxes.map((label) => (
-            <CheckBox label={label} />
+            <CheckBox label={label} value={label} />
           ))}
         </FieldSet>
         <FieldSet legend="What is your preferred integration method?">
           {radios.map((label) => (
-            <Radio name="integration" label={label} />
+            <Radio name="integration" label={label} value={label} />
           ))}
         </FieldSet>
         <Button>Create team</Button>
