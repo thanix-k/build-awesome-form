@@ -6,6 +6,13 @@ export default {
       backgroundImage: {
         "tick-mark": "url('./assets/images/TickMark.svg')",
       },
+      colors: {
+        "custom-purple": "#796bfa",
+        "custom-grey": "#545251",
+      },
+    },
+    borderWidth: {
+      6: "6px",
     },
     plugins: [],
   },
