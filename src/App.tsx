@@ -41,14 +41,10 @@ function App() {
         <Input id="organisation_name" label="What is your company called?" placeholder="Organisation name" type="text" required />
         <Input id="website_url" label="What is your website url (optional)?" placeholder="https://" type="url" required/>
         <FieldSet legend="I’m signing up for Tiptap because">
-          {checkBoxes.map(({ label,key}) => (
-            <CheckBox key={key} label={label} value={label} />
-          ))}
+          {checkBoxes.map(({ label,key}) => <CheckBox key={key} label={label} value={label} />)}
         </FieldSet>
         <FieldSet legend="What is your preferred integration method?">
-          {radios.map(({label,key}) => (
-            <Radio key={key} name="integration" label={label} value={label} />
-          ))}
+          {radios.map(({label,key}) => <Radio key={key} name="integration" label={label} value={label} />)}
         </FieldSet>
         <Button type="submit">Create team</Button>
       </form>
