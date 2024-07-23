@@ -50,7 +50,7 @@ function App() {
             <Radio key={key} name="integration" label={label} value={label} />
           ))}
         </FieldSet>
-        <Button>Create team</Button>
+        <Button type="submit">Create team</Button>
       </form>
     </div>
   );
