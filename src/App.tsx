@@ -1,9 +1,15 @@
+import UserForm from "./Form";
+
 function App() {
   return (
-    <div className="flex items-center justify-center w-full h-dvh">
-     <h1 className="text-3xl">Your form goes here...</h1>
-    </div>
-  )
+    <>
+      {" "}
+      <h1 className="text-3xl">Tell us about your team</h1>
+      <div className="flex items-center justify-center w-full h-dvh">
+        <UserForm />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
