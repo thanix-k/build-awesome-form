@@ -23,76 +23,99 @@ const UserForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="companny">What is your company called?</label>
-      </div>
-      <div>
-        <input
-          id="company"
-          name="company"
-          type="text"
-          value={formData.company}
-          onChange={handleChange}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        />
-      </div>
-      <div>
-        <label htmlFor="url">What is your website url (optional)?</label>
-      </div>
-      <div>
-        <input
-          id="url"
-          name="url"
-          type="text"
-          value={formData.url}
-          placeholder="https://"
-          onChange={handleChange}
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        />
-      </div>
-      <div>
-        <input type="checkbox" id="editor" name="editor" value="Editor" />
-        <label htmlFor="editor"> Editor</label>
+    <div className="min-h-screen flex items-center justify-center     p-6">
+      <div className="bg-gradient-to-b from-black to-purple-900 rounded-lg shadow-lg p-8 max-w-md w-full">
+        <h1 className="text-2xl  mb-6 text-white">Tell us about your team</h1>
+        <form>
+          <div className="mb-4">
+            <label className="block text-white text-sm mb-2" htmlFor="company">
+              What is your company called?
+            </label>
+            <input
+              id="company"
+              type="text"
+              placeholder="Organization name"
+              value={formData.company}
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
 
-        <input
-          type="checkbox"
-          id="collaboration"
-          name="collaboration"
-          value="Collaboration"
-        />
-        <label htmlFor="collaboration"> Collaboration</label>
+          <div className="mb-4">
+            <label className="block text-white  text-sm  mb-2" htmlFor="url">
+              What is your website url (optional)?
+            </label>
+            <input
+              id="url"
+              type="text"
+              value={formData.url}
+              placeholder="https://"
+              onChange={handleChange}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
 
-        <input
-          type="checkbox"
-          id="integration"
-          name="integration"
-          value="Integration"
-        />
-        <label htmlFor="integration"> AI Integration</label>
+          <div className="mb-4">
+            <p className="block text-white text-sm  mb-2">
+              I'm signing up for Tiptap because
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <label className="flex items-center">
+                <input type="checkbox" className="form-checkbox" />
+                <span className="ml-2 text-gray-700">Editor</span>
+              </label>
+              <label className="flex items-center">
+                <input type="checkbox" className="form-checkbox" />
+                <span className="ml-2 text-gray-700">Collaboration</span>
+              </label>
+              <label className="flex items-center">
+                <input type="checkbox" className="form-checkbox" />
+                <span className="ml-2 text-gray-700">AI Integration</span>
+              </label>
+              <label className="flex items-center">
+                <input type="checkbox" className="form-checkbox" />
+                <span className="ml-2 text-gray-700">Other</span>
+              </label>
+            </div>
+          </div>
 
-        <input type="checkbox" id="other" name="other" value="Other" />
-        <label htmlFor="other"> Other</label>
+          <div className="mb-6">
+            <p className="block text-white text-sm mb-2">
+              What is your preferred integration method?
+            </p>
+            <div
+              className="flex gap-4 radio_group"
+              role="radiogroup"
+              aria-labelledby="radio-description"
+            >
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="integrationMethod"
+                  className="form-radio"
+                />
+                <span className="ml-2 text-gray-700">Self hosted</span>
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="integrationMethod"
+                  className="form-radio"
+                />
+                <span className="ml-2 text-gray-700">Cloud</span>
+              </label>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-white  text-black font-bold py-2 px-4 rounded "
+          >
+            Create team
+          </button>
+        </form>
       </div>
-
-      <div
-        role="radiogroup"
-        aria-labelledby="radio-description"
-        className="radio_group"
-      >
-        <h4 id="radio-description">
-          What is your preferred integration method?
-        </h4>
-        <input type="radio" name="format" id="self" value="self" checked />
-        <label htmlFor="self">Self Hosted</label>
-        <input type="radio" name="format" id="cloud" value="cloud" />
-        <label htmlFor="cloud">Cloud</label>
-      </div>
-
-      <button className="px-20 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
-        Create Team
-      </button>
-    </form>
+    </div>
   );
 };
 
