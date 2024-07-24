@@ -6,7 +6,7 @@ import InputSubmit from "./InputSubmit"
 
 const Form = () => {
   return (
-    <form className="max-w-[512px] min-w-[300px] bg-gradient-to-r from-gray-900 to-purple-500 min-h-96 flex flex-col p-10 rounded-xl gap-4">
+    <form className="max-w-[512px] min-w-[300px] bg-gradient-to-r from-gray-900 to-purple-500 min-h-96 flex flex-col p-10 rounded-xl gap-4" onSubmit={(e) => e.preventDefault()}>
          <Heading heading="Tell us about your team"/>
           <Input id="organization" label="What is your company called?" placeholder="Organisation name" type="text"/>
           <Input id="website" label="What is your website url (optional)?" placeholder="https://" type="url"/>
