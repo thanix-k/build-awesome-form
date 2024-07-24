@@ -23,7 +23,7 @@ const UserForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center     p-6">
+    <div className="min-h-screen flex items-center justify-center p-6">
       <div className="bg-gradient-to-b from-black to-purple-900 rounded-lg shadow-lg p-8 max-w-md w-full">
         <h1 className="text-2xl  mb-6 text-white">Tell us about your team</h1>
         <form>
@@ -60,21 +60,21 @@ const UserForm = () => {
               I'm signing up for Tiptap because
             </p>
             <div className="flex flex-wrap gap-2">
-              <label className="flex items-center">
+              <label className="flex items-center bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input type="checkbox" className="form-checkbox" />
-                <span className="ml-2 text-gray-700">Editor</span>
+                <span className="ml-2 text-white ">Editor</span>
               </label>
-              <label className="flex items-center">
+              <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input type="checkbox" className="form-checkbox" />
-                <span className="ml-2 text-gray-700">Collaboration</span>
+                <span className="ml-2  text-white">Collaboration</span>
               </label>
-              <label className="flex items-center">
+              <label className="flex items-center bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input type="checkbox" className="form-checkbox" />
-                <span className="ml-2 text-gray-700">AI Integration</span>
+                <span className="ml-2  text-white">AI Integration</span>
               </label>
-              <label className="flex items-center">
+              <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input type="checkbox" className="form-checkbox" />
-                <span className="ml-2 text-gray-700">Other</span>
+                <span className="ml-2  text-white">Other</span>
               </label>
             </div>
           </div>
@@ -88,21 +88,21 @@ const UserForm = () => {
               role="radiogroup"
               aria-labelledby="radio-description"
             >
-              <label className="flex items-center">
+              <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2">
                 <input
                   type="radio"
                   name="integrationMethod"
                   className="form-radio"
                 />
-                <span className="ml-2 text-gray-700">Self hosted</span>
+                <span className="ml-2  text-white">Self hosted</span>
               </label>
-              <label className="flex items-center">
+              <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2">
                 <input
                   type="radio"
                   name="integrationMethod"
                   className="form-radio"
                 />
-                <span className="ml-2 text-gray-700">Cloud</span>
+                <span className="ml-2  text-white">Cloud</span>
               </label>
             </div>
           </div>
