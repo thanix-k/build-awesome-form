@@ -29,11 +29,12 @@ const UserForm = () => {
       </div>
       <div>
         <input
-          type="text"
           id="company"
           name="company"
+          type="text"
           value={formData.company}
           onChange={handleChange}
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
       </div>
       <div>
@@ -41,12 +42,13 @@ const UserForm = () => {
       </div>
       <div>
         <input
-          type="text"
           id="url"
           name="url"
+          type="text"
           value={formData.url}
           placeholder="https://"
           onChange={handleChange}
+          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
       </div>
       <div>
@@ -87,7 +89,9 @@ const UserForm = () => {
         <label htmlFor="cloud">Cloud</label>
       </div>
 
-      <button type="submit">Create Team</button>
+      <button className="px-20 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
+        Create Team
+      </button>
     </form>
   );
 };
