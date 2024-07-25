@@ -24,7 +24,7 @@ const UserForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="bg-gradient-to-b from-black to-purple-900 rounded-lg shadow-lg p-8 max-w-md w-full">
+      <div className="bg-[url('https://cloud.tiptap.dev/images/gradients/gradient_login.png')]  bg-black rounded-lg shadow-lg p-8 max-w-md w-full  ">
         <h1 className="text-2xl  mb-6 text-white">Tell us about your team</h1>
         <form>
           <div className="mb-4">
