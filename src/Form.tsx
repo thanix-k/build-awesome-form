@@ -61,19 +61,31 @@ const UserForm = () => {
             </p>
             <div className="flex flex-wrap gap-2">
               <label className="flex items-center bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
-                <input type="checkbox" className="form-checkbox" />
+                <input
+                  type="checkbox"
+                  className="form-check accent-purple-500"
+                />
                 <span className="ml-2 text-white ">Editor</span>
               </label>
               <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
-                <input type="checkbox" className="form-checkbox" />
+                <input
+                  type="checkbox"
+                  className="form-checkbox accent-purple-500"
+                />
                 <span className="ml-2  text-white">Collaboration</span>
               </label>
               <label className="flex items-center bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
-                <input type="checkbox" className="form-checkbox" />
+                <input
+                  type="checkbox"
+                  className="form-checkbox accent-purple-500"
+                />
                 <span className="ml-2  text-white">AI Integration</span>
               </label>
               <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
-                <input type="checkbox" className="form-checkbox" />
+                <input
+                  type="checkbox"
+                  className="form-checkbox accent-purple-500"
+                />
                 <span className="ml-2  text-white">Other</span>
               </label>
             </div>
@@ -92,7 +104,7 @@ const UserForm = () => {
                 <input
                   type="radio"
                   name="integrationMethod"
-                  className="form-radio"
+                  className="form-radio accent-purple-500"
                 />
                 <span className="ml-2  text-white">Self hosted</span>
               </label>
@@ -100,7 +112,7 @@ const UserForm = () => {
                 <input
                   type="radio"
                   name="integrationMethod"
-                  className="form-radio"
+                  className="form-radio accent-purple-500"
                 />
                 <span className="ml-2  text-white">Cloud</span>
               </label>
