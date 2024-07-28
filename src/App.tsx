@@ -21,7 +21,8 @@ const checkBoxes = [
     label: "Other",
     key: "checkbox_other",
   }
-];
+] as const;
+
 const radios = [
   {
     label: "Self hosted",
@@ -31,7 +32,7 @@ const radios = [
     label: "Cloud",
     key: "radio_cloud"
   }
-];
+] as const;
 
 function App() {
   return (
