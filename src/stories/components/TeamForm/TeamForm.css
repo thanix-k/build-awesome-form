@@ -1,0 +1,16 @@
+.team-form {
+    max-width: 450px;
+    background: linear-gradient(90deg, hsla(40, 7%, 9%, 1) 0%, hsla(204, 64%, 60%, 1) 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+}
+
+.form-title {
+    color: white;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: 400;
+}

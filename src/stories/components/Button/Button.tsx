@@ -1,6 +1,9 @@
 import "./Button.css"
 export interface ButtonProps {
+  type?: string;
+  form?: string;
   label: string;
+  value?: string;
   onClick?: () => void;
 }
 
