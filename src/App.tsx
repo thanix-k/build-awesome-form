@@ -46,8 +46,9 @@ function App() {
   const {
     control,
     handleSubmit,
-    formState: { errors },
-    getValues
+    formState: { errors,isSubmitting,isSubmitSuccessful },
+    getValues,
+    reset
   } = useForm<FormData>({
     defaultValues: {
       organisation_name: "",
@@ -57,7 +58,8 @@ function App() {
     }
   });
 
-  const onSubmit: SubmitHandler<FormData> = (data: any) => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(data);
   };
 
@@ -86,38 +88,42 @@ function App() {
   return (
     <div className="flex items-center justify-center w-full h-dvh bg-black flex-col gap-4">
       <form className="w-full max-w-lg bg-gradient-to-r from-slate-900 to-purple-900 p-10 flex flex-col gap-5 rounded-xl" onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="text-white text-3xl font-serif font-normal mb-4">Tell us about your team</h1>
-        <Controller
-          name="organisation_name"
-          control={control}
-          rules={{
-            required: "Organization name is required.",
-          }}
-          render={({ field }) => <Input id="organisation_name" label="What is your company called?" placeholder="Organisation name" type="text" errorState={errors.organisation_name} {...field} />}
-        />
-        <Controller
-          name="website_url"
-          control={control}
-          render={({ field }) => <Input id="website_url" label="What is your website url (optional)?" placeholder="https://" type="url" {...field}/>}
-        />
-        <Controller
-          name="reason"
-          control={control}
-          render={({ field: { onChange,...restField} }) =>
-            <FieldSet legend="I’m signing up for Tiptap because">
-              {checkBoxes.map(({ label, key }) => <CheckBox key={key} label={label} {...restField} value={label} onChange={(event) => radioGroupChanges(event.target.value,onChange)} />)}
+        <h1 className="text-white text-3xl font-serif font-normal mb-4">{isSubmitSuccessful?"Thank you for your response!":"Tell us about your team"}</h1>
+        { 
+          isSubmitSuccessful ? <Button onClick={()=>reset()}>Submit another response</Button> : <>
+             <Controller
+              name="organisation_name"
+              control={control}
+              rules={{
+                required: "Organization name is required.",
+              }}
+              render={({ field }) => <Input id="organisation_name" label="What is your company called?" placeholder="Organisation name" type="text" errorState={errors.organisation_name} {...field} />}
+            />
+            <Controller
+              name="website_url"
+              control={control}
+              render={({ field }) => <Input id="website_url" label="What is your website url (optional)?" placeholder="https://" type="url" {...field}/>}
+            />
+            <Controller
+              name="reason"
+              control={control}
+              render={({ field: { onChange,...restField} }) =>
+                <FieldSet legend="I’m signing up for Tiptap because">
+                  {checkBoxes.map(({ label, key }) => <CheckBox key={key} label={label} {...restField} value={label} onChange={(event) => radioGroupChanges(event.target.value,onChange)} />)}
+                </FieldSet>
+              }
+            />
+            <FieldSet legend="What is your preferred integration method?">
+              {radios.map(({ label, key }) => <Controller
+                key={key}
+                name="integration"
+                control={control}
+                render={({ field }) => <Radio key={key} label={label} {...field} value={label} />}
+              />)}
             </FieldSet>
-          }
-        />
-        <FieldSet legend="What is your preferred integration method?">
-          {radios.map(({ label, key }) => <Controller
-            key={key}
-            name="integration"
-            control={control}
-            render={({ field }) => <Radio key={key} label={label} {...field} value={label} />}
-          />)}
-        </FieldSet>
-        <Button type="submit">Create team</Button>
+            <Button type="submit">{ isSubmitting ? "Submitting...":"Create team"}</Button>
+          </>
+        }
       </form>
     </div>
   );
