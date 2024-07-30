@@ -35,9 +35,7 @@ const UserForm = () => {
               id="company"
               type="text"
               placeholder="Organization name"
-              value={formData.company}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none  rounded w-full py-2 px-3 text-white placeholder-gray-700 bg-gray-800   leading-tight  focus:shadow-outline     focus:outline-none focus:shadow-outline focus:border-purple-500 focus:ring-2 focus:ring-purple-500 "
             />
           </div>
 
@@ -48,10 +46,8 @@ const UserForm = () => {
             <input
               id="url"
               type="text"
-              value={formData.url}
               placeholder="https://"
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none  rounded w-full py-2 px-3  text-white placeholder-gray-700   bg-gray-800 leading-tight  focus:shadow-outline focus:outline-none focus:shadow-outline focus:border-purple-500 focus:ring-2 focus:ring-purple-500 "
             />
           </div>
 
@@ -63,28 +59,28 @@ const UserForm = () => {
               <label className="flex items-center bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input
                   type="checkbox"
-                  className="form-check accent-purple-500"
+                  className="form-check accent-purple-500  text-purple-500  focus:ring-2 focus:ring-purple-500  focus:outline-none"
                 />
                 <span className="ml-2 text-white ">Editor</span>
               </label>
               <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input
                   type="checkbox"
-                  className="form-checkbox accent-purple-500"
+                  className="form-checkbox accent-purple-500  text-purple-500  focus:ring-2 focus:ring-purple-500  focus:outline-none"
                 />
                 <span className="ml-2  text-white">Collaboration</span>
               </label>
               <label className="flex items-center bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input
                   type="checkbox"
-                  className="form-checkbox accent-purple-500"
+                  className="form-checkbox accent-purple-500  text-purple-500  focus:ring-2 focus:ring-purple-500  focus:outline-none"
                 />
                 <span className="ml-2  text-white">AI Integration</span>
               </label>
               <label className="flex items-center  bg-gray-600 bg-opacity-50 rounded-xl p-2 ">
                 <input
                   type="checkbox"
-                  className="form-checkbox accent-purple-500"
+                  className="form-checkbox accent-purple-500  text-purple-500  focus:ring-2 focus:ring-purple-500  focus:outline-none"
                 />
                 <span className="ml-2  text-white">Other</span>
               </label>
@@ -104,7 +100,7 @@ const UserForm = () => {
                 <input
                   type="radio"
                   name="integrationMethod"
-                  className="form-radio accent-purple-500"
+                  className="form-radio accent-purple-500  text-purple-500  focus:ring-2 focus:ring-purple-500  focus:outline-none"
                 />
                 <span className="ml-2  text-white">Self hosted</span>
               </label>
@@ -112,7 +108,7 @@ const UserForm = () => {
                 <input
                   type="radio"
                   name="integrationMethod"
-                  className="form-radio accent-purple-500"
+                  className="form-radio accent-purple-500  text-purple-500  focus:ring-2 focus:ring-purple-500  focus:outline-none"
                 />
                 <span className="ml-2  text-white">Cloud</span>
               </label>
