@@ -1,0 +1,24 @@
+{
+    "checkBoxes" : [
+        {
+        "label": "Editor"
+        },
+        {
+        "label": "Collaboration"
+        },
+        {
+        "label": "AI Integration"
+        },
+        {
+        "label": "Other"
+        }
+    ],
+    "radios" : [
+        {
+        "label": "Self hosted"
+        },
+        {
+        "label": "Cloud"
+        }
+    ]
+}
