@@ -6,7 +6,11 @@ export default {
     "./src/stories/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+        backgroundImage: {
+          'tick': "url('./src/stories/assets/checkbox-tick.svg')",
+        },
+    },
   },
   plugins: [],
 }
